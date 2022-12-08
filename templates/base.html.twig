@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Bienvenu(e) sur Urza-web !
+			{% endblock %}
+		</title>
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('medias/icons/apple-icon-57x57.png') }}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('medias/icons/apple-icon-60x60.png') }}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('medias/icons/apple-icon-72x72.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('medias/icons/apple-icon-76x76.png') }}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('medias/icons/apple-icon-114x114.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('medias/icons/apple-icon-120x120.png') }}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('medias/icons/apple-icon-144x144.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('medias/icons/apple-icon-152x152.png') }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('medias/icons/apple-icon-180x180.png') }}">
+		<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('medias/icons/android-icon-192x192.png') }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('medias/icons/favicon-32x32.png') }}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('medias/icons/favicon-96x96.png') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('medias/icons/favicon-16x16.png') }}">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-config" content="browserconfig.xml" />
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="{{ asset('medias/icons/ms-icon-144x144.png') }}">
+		<meta name="theme-color" content="#ffffff">
+		<!-- <script src="https://kit.fontawesome.com/0b80b0b83d.js" crossorigin="anonymous"></script>-->
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+			{{ encore_entry_link_tags('awasome') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+			{{ encore_entry_script_tags('awasome') }}
+		{% endblock %}
+	</head>
+	<body class="master_content">
+		<header>
+			{% include "header.html.twig" %}
+		</header>
+
+			{% block body %}{% endblock %}
+
+		<footer class="footer1">
+			<div class="container text-center">
+				{% include "footer.html.twig" %}
+			</div>
+		</footer>
+
+		<footer class="footer2">
+			<div class="container text-center">
+				<span class="text-notice text-center">SnowTrick | 2022 &copy;  Tous droits réservés</span>
+				<br/>
+				<a href="https://fr.freepik.com/vecteurs-libre/concept-cybersecurite_4520117.htm#query=fond%20informatique&position=6&from_view=keyword" target="_blank">Image de rawpixel.com</a>
+				sur Freepik
+			</div>
+		</footer>
+	</body>
+</html>

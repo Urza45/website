@@ -1,0 +1,46 @@
+<div class="col justify-content-evenly">
+	<a class="btn text-light" href="{{ path('app_main') }}">
+		<h1>
+			<i class="fa-solid fa-house-chimney"></i>
+		</h1>
+	</a>
+	<a class="btn text-light" href="{{ path('app_main') }}#tricks">
+		<h1>
+			<i class="fa-solid fa-person-snowboarding"></i>
+		</h1>
+	</a>
+	{% if app.user %}
+		<a class="btn text-light" href="{{ path('app_logout') }}">
+			<h1>
+				<i class="fa-solid fa-right-from-bracket"></i>
+			</h1>
+		</a>
+		<a class="py-3 px-0 px-lg-3 rounded" href="{{ path('app_user') }}">
+			{% if app.user.avatar %}
+				<img src="{{ asset(app.user.avatar.url) }}" class="rounded-circle" height="35px"/>
+			{% else %}
+				<img src="{{ asset('medias/avatars/manProfil.jpg') }}" class="rounded-circle" width="40px" height="35px"/>
+			{% endif %}
+		</a>
+		{% if 'ROLE_ADMIN' in app.user.roles %}
+			<a class="btn text-light" href="{{ path('app_main') }}">
+				<h1>
+					<i class="fa-solid fa-gear"></i>
+				</h1>
+			</a>
+		{% endif %}
+	{% else %}
+		<a class="btn text-light" href="{{ path('app_main') }}">
+			<h1>
+				<i class="fa-solid fa-right-to-bracket"></i>
+			</h1>
+		</a>
+		<a class="btn text-light" href="{{ path('app_main') }}">
+			<h1>
+				<i class="fa-solid fa-user-plus"></i>
+			</h1>
+		</a>
+	{% endif %}
+	<a href="https://fr.freepik.com/vecteurs-libre/concept-cybersecurite_4520117.htm#query=fond%20informatique&position=6&from_view=keyword" target="_blank">Image de rawpixel.com</a>
+	sur Freepik
+</div>
