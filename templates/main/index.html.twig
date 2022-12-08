@@ -1,39 +1,195 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!
+{% block title %}Bienvenu(e)
 {% endblock %}
 
 {% block body %}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
-	<section class="bg-secondary p-2 bg-opacity-50">
-		<div class="example-wrapper">
-			<h1>Hello
-				{{ controller_name }}! ✅</h1>
-
-			This friendly message is coming from:
-			<ul>
-				<li>Your controller at
-					<code>
-						<a href="{{ 'D:/WAMP/www/urza-web/src/Controller/MainController.php'|file_link(0) }}">src/Controller/MainController.php</a>
-					</code>
-				</li>
-				<li>Your template at
-					<code>
-						<a href="{{ 'D:/WAMP/www/urza-web/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a>
-					</code>
-				</li>
-			</ul>
+	<!-- <section class="bg-secondary p-2 bg-opacity-50"><div class="card text-bg-dark"> -->
+	<section>
+		<div class="row row-cols-1 row-cols-md-2 g-4">
+			<div class="col">
+				<div class="card border-info">
+					<img src="{{ asset('medias/image-fond-sans-bord.png') }}" class="card-img" alt="...">
+					<div class="card-img-overlay">
+						<h5 class="card-title ">Bienvenu(e) sur notre site</h5>
+						<p class="card-text"></p>
+						<p class="card-text">
+							<small></small>
+						</p>
+					</div>
+				</div>
+				<div class="card border-info text-bg-dark">
+					<div class="card-body">
+						<p class="card-text">Visionner nos réalisations</p>
+						<div class="row row-cols-2 row-cols-md-3 g-4">
+							<div class="col">
+								<div class="card border-danger text-bg-dark">
+									<img src="{{ asset('medias/Snowtrick.jpg') }}" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="card-title">Snowtricks</h5>
+										<p class="card-text">
+											<a href="https://p6.urza-web.fr/" class="btn btn-info" target="_blank">
+												<i class="fa-solid fa-eye"></i>
+												Voir
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card border-danger text-bg-dark">
+									<img src="{{ asset('medias/Blog.jpg') }}" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="card-title">Blog</h5>
+										<p class="card-text">
+											<a href="https://p5.urza-web.fr/" class="btn btn-info" target="_blank">
+												<i class="fa-solid fa-eye"></i>
+												Voir
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card border-danger text-bg-dark">
+									<img src="{{ asset('medias/Bilemo.jpg') }}" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="card-title">Bilemo</h5>
+										<p class="card-text">
+											<a href="https://p7.urza-web.fr/" class="btn btn-info" target="_blank">
+												<i class="fa-solid fa-eye"></i>
+												Voir
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<a href="{{ path('app_main') }}" class="btn btn-link" tabindex="-1" role="button" aria-disabled="true">Voir plus de réalisations</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card border-info text-bg-dark">
+					<div class="card-body">
+						<p class="card-text">Si vous cherchez une personne capable de :</p>
+						<ul>
+							<li>Concevoir et développer des applications</li>
+							<li>Analyser des problèmes techniques</li>
+							<li>Déterminer des mesures correctives</li>
+							<li>Analyser les besoins du client et établir un cahier des charges</li>
+						</ul>
+						<p>maitrisant des langages de programmation :</p>
+						<ul>
+							<li>PHP 5 à 8, Symfony 3.4 à 6.2, HTLM 5, CSS 3 et javascript</li>
+							<li>Visual Basic pour Application (VBA)</li>
+							<li>Pascal, Delphi, Fortran, Foxpro</li>
+							<li>SQL (PostgreSQL, MySQL, MS SQL, SQLlite ...)</li>
+						</ul>
+						<p>maitrisant des logiciels de bureautique :</p>
+						<ul>
+							<li>Word, Excel, Powerpoint, Publisher ...</li>
+						</ul>
+						<p>assembler des PC, remplacer des pièces sur PC, portables, tablettes et téléphones</p>
+						alors vous êtes au bon endroit. N'hésitez pas à consulter mes posts ou à me contacter.</p>
+				</div>
+			</div>
 		</div>
-	</section>
-{% endblock %}
+	</div>
+</section>
+<br/>
+<section>
+	<div class="row row-cols-1 row-cols-md-2 g-4">
+		<div class="col">
+			<div class="card border-info text-bg-dark">
+				<img src="{{ asset('medias/SAP_Bannière_large.jpg') }}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<i class="fa-solid fa-user"></i>
+						Particuliers : profiter de nos services à la personne</h5>
+					<p class="card-text">4 bonnes raisons de faire appel à notre entreprise :</p>
+					<ul>
+						<li>Pour accéder au savoir d'un professionnel de l'informatique</li>
+						<li>Pour bénéficier d'une réduction de 50% sur nos prestations</li>
+						<li>Pour la simplicité administrative</li>
+						<li>Pour vous réconcilier avec l'informatique</li>
+					</ul>
+					<a href="{{ path('app_main') }}" class="btn btn-link" tabindex="-1" role="button" aria-disabled="true">Plus d'informations</a>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card border-info text-bg-dark">
+				<img src="{{ asset('medias/Bannière-pro.jpg') }}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">
+						<i class="fa-solid fa-user-tie"></i>
+						Professionnels : profiter d'une assistance réactive</h5>
+					<p class="card-text"></p>
+					<ul>
+						<li>Maintenance de parc informatique</li>
+						<li>Sauvegardes et récupérations de données</li>
+						<li>Créations et hébergements de sites web</li>
+						<li>...</li>
+					</ul>
+					<a href="{{ path('app_main') }}" class="btn btn-link" tabindex="-1" role="button" aria-disabled="true">Plus d'informations</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<br/>
+<section>
+	<div class="row row-cols-1 row-cols-md-1 g-4">
+		<div class="col">
+			<div class="card border-info text-bg-dark">
+				<div class="card-body">
+					<h5 class="card-title">
+						<i class="fa-solid fa-blog"></i>
+						Blog</h5>
+					<p class="card-text">Visionner nos derniers articles.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+<br/>
+<section>
+	<!-- <div class="card mb-3" style="max-width: 540px;"> width="600" height="450" -->
+	<div class="card mb-3 border-info text-bg-dark">
+		<div class="row g-0">
+			<div class="col-md-5">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10480.563072688314!2d1.9236385!3d48.9508054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53161bb4ffa08f05!2sMonsieur%20SERGE%20PILLAY!5e0!3m2!1sfr!2sfr!4v1670525152668!5m2!1sfr!2sfr" width="320px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="col-md-7">
+				<div class="card-body">
+					<p class="card-text">
+						<i class="fa fa-map-marker"></i>
+						13 Rue du Parc, 78920 Ecquevilly<br/>
+						<i class="fa-regular fa-clock"></i>
+						Horaires :
+						<ul>
+							<li>Lundi 08:00–17:00</li>
+							<li>Mardi 08:00–17:00</li>
+							<li>Mercredi 08:00–17:00</li>
+							<li>Jeudi 08:00–17:00</li>
+							<li>Vendredi 08:00–17:00</li>
+							<li>Samedi 08:00–17:00</li>
+							<li>Dimanche Fermé</li>
+						</ul><br/>
+						Me contacter :
+						<i class="fa-solid fa-globe"></i>
+						<a href="https://monsieur-serge-pillay.business.site/" target="_blank">Site Business</a>
+
+					</p>
+					<p class="card-text">
+						<small class="text-muted"></small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<hr/>
+<hr/>{% endblock %}

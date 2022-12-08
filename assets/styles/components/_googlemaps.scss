@@ -1,0 +1,10 @@
+.mapssize {
+  width: 640px;
+  height: 400px;
+
+  @media all and (max-width: 900px) {
+    width: 320px;
+    height: 200px;
+    align-content: center;
+  }
+}
