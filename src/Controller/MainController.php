@@ -11,9 +11,9 @@ class MainController extends AbstractController
     /**
      * index function
      * Show the main page
-     * 
+     *
      * @Route("/", name="app_main")
-     * 
+     *
      * @return void
      */
     public function index(): Response
